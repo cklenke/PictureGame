@@ -503,7 +503,7 @@ class PictureGameViewController: UIViewController, SFSpeechRecognizerDelegate {
 		}
 		//finishButton.isHidden = false
 		self.countdown.invalidate()
-		
+		self.hideTimer.invalidate()
 		
 		//self.countDownLabel.isHidden = true
 		self.hideImages()
@@ -511,6 +511,9 @@ class PictureGameViewController: UIViewController, SFSpeechRecognizerDelegate {
 		//self.introLabel.isHidden = false
 		self.findAcceleration()
 		self.saveData()
+		let alert = UIAlertController(title: "Game Finished", message: "You have finished the game. Thank you for playing!", preferredStyle: UIAlertControllerStyle.alert)
+		alert.addAction(UIAlertAction(title: "Finish", style: UIAlertActionStyle.default, handler: nil))
+		self.present(alert, animated: true, completion: nil)
 		
 	}
 	
