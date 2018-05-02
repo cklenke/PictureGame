@@ -47,7 +47,7 @@ class PictureGameViewController: UIViewController, SFSpeechRecognizerDelegate {
 	var timer = Timer()
 	var countdown = Timer()
 	var hideTimer = Timer()
-	var countDownCount: Int = 30
+	var countDownCount: Int = 150
 	var playerCanGuess: Bool = true
 	
 	// persistence
@@ -452,6 +452,7 @@ class PictureGameViewController: UIViewController, SFSpeechRecognizerDelegate {
 		
 		self.hideImages()
 		self.generateImage()
+    
 	}
 	
 	//if they miss 5 in a row, abort
